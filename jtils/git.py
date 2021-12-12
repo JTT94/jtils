@@ -1,3 +1,5 @@
+from git import Repo
+
 def git_push():
 
   COMMIT_MESSAGE = 'MODEL RUN'
