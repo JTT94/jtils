@@ -5,7 +5,7 @@ from hydra import compose, initialize
 from omegaconf import OmegaConf
 import omegaconf
 
-from jtils.filepaths import get_directory, get_filename
+from jtils.files import get_directory, get_filename
 
 def clear_hydra():
     ' GlobalHydra is already initialized, call GlobalHydra.instance().clear() if you want to re-initialize'
