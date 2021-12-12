@@ -1,0 +1,9 @@
+# @package _global_
+
+# data 
+data:
+  dataset: "mnist"
+  category: ""
+  image_size: 28
+  channels: 1
+
