@@ -11,7 +11,7 @@ from tqdm import tqdm
 from jtils.files import makedir_exist_ok
 
 
-def gdrive_download(file_list, download_dir, zip_file_name):
+def gdrive_download(file_list, download_dir):
         for (file_id, filename) in file_list:
             fp = os.path.join(download_dir, filename)
             if not os.path.exists(fp):
