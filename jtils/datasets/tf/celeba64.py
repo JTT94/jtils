@@ -29,11 +29,11 @@ def load_celeba64(data_dir='./', tfr_filename='celeba.tfr',
                   shuffle_buffer_size = 10000):
 
     tfr_filepath = os.path.join(data_dir, tfr_filename)
-    if tfr_filepath not in os.listdir(data_dir):
+    if tfr_filename not in os.listdir(data_dir):
         # download
         if "img_align_celeba.zip" not in os.listdir(data_dir):
             print('Download')
-            download_celeba64(data_dir, tfr_filepath)
+            download_celeba64(data_dir)
         
         # extract
         if "img_align_celeba" not in os.listdir(data_dir):
