@@ -55,7 +55,7 @@ def config_eval(fnc):
                 fn_input[k] = out
             else:
                 fn_input[k] = v.default
-        return fnc(**cfg)
+        return fnc(**fn_input)
     return fn
         
                     
