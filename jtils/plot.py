@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_img(img):
+def plot_img(img, **kwargs):
     img = img/ 255. if img.max() > 1. else img
     shape = img.shape
 
@@ -20,7 +20,9 @@ def plot_img(img):
         if shape[0] < shape[2]:
             img = np.moveaxis(img, 2, 0)
 
-    if len(shape) == 2:
-        plt.imshow(img, cmap='gray')
-    else:
-        plt.imshow(img)
+
+    plt.imshow(img, **kwargs)
+
+
+def plot_2d(x, *args, **kwargs):
+    plt.plot(x[:,0], x[:,1], *args, **kwargs)
