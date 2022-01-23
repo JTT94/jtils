@@ -19,6 +19,10 @@ def plot_img(img, *args, **kwargs):
     if len(shape) == 3:
         if shape[0] < shape[2]:
             img = np.moveaxis(img, 2, 0)
+        
+        shape = img.shape
+        if shape[2] == 1:
+            img = img.reshape(shape[0], shape[1])
 
 
     plt.imshow(img, *args, **kwargs)
