@@ -7,3 +7,5 @@ def batch_add(a, b):
 
 def batch_mul(a, b):
   return jax.vmap(lambda a, b: a * b)(a, b)
+
+batch_flatten = jax.vmap(lambda x: x.flatten())
